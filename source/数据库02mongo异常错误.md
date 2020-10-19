@@ -1,7 +1,9 @@
 # 数据库02mongo异常错误
 ## mongo报错WiredTiger.wt, connection: /data/db/WiredTiger.wt: handle-open: open: Operation not permitted
-表现：sudo mongod可以成功启动mongo，但是不加sudo则不行，自然不希望每次都加sudo    
-完整报错：  
+表现：sudo mongod可以成功启动mongo，但是不加sudo则不行，自然不希望每次都加sudo
+
+完整报错：
+
 ```
 2019-06-04T21:12:39.488+0800 I CONTROL  [initandlisten] MongoDB starting : pid=13900 port=27017 dbpath=/data/db 64-bit host=john-P95-HP
 2019-06-04T21:12:39.488+0800 I CONTROL  [initandlisten] db version v3.6.3
@@ -25,7 +27,8 @@
 2019-06-04T21:12:39.933+0800 I NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
 2019-06-04T21:12:39.933+0800 I CONTROL  [initandlisten] now exiting
 ```
-处理：  
+处理：
+
 
 ```
 # storage.dbPath
@@ -34,9 +37,12 @@ sudo chown -R mongodb:mongodb /var/lib/mongodb
 # systemLog.path
 sudo chown -R mongodb:mongodb /var/log/mongodb
 ```
-这里面的mongodb:mongodb分别是用户组和用户名，  
-可通过如下命令查询当前用户所属组，  
+这里面的mongodb:mongodb分别是用户组和用户名，
+
+可通过如下命令查询当前用户所属组，
+
 ```
 groups xxxx：xxxx是当前登录用户（一个用户可能属于多个组）  
 ```
-参考：https://stackoverflow.com/questions/43137250/mongodb-3-4-3-permission-denied-wiredtiger-kv-engine-cpp-267-error-with-ubuntu-1  
+参考：https://stackoverflow.com/questions/43137250/mongodb-3-4-3-permission-denied-wiredtiger-kv-engine-cpp-267-error-with-ubuntu-1
+
