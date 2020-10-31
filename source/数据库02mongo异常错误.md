@@ -5,27 +5,27 @@
 完整报错：
 
 ```
-2019-06-04T21:12:39.488+0800 I CONTROL  [initandlisten] MongoDB starting : pid=13900 port=27017 dbpath=/data/db 64-bit host=john-P95-HP
-2019-06-04T21:12:39.488+0800 I CONTROL  [initandlisten] db version v3.6.3
-2019-06-04T21:12:39.488+0800 I CONTROL  [initandlisten] git version: 9586e557d54ef70f9ca4b43c26892cd55257e1a5
-2019-06-04T21:12:39.488+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
-2019-06-04T21:12:39.488+0800 I CONTROL  [initandlisten] allocator: tcmalloc
-2019-06-04T21:12:39.488+0800 I CONTROL  [initandlisten] modules: none
-2019-06-04T21:12:39.488+0800 I CONTROL  [initandlisten] build environment:
-2019-06-04T21:12:39.488+0800 I CONTROL  [initandlisten]     distarch: x86_64
-2019-06-04T21:12:39.488+0800 I CONTROL  [initandlisten]     target_arch: x86_64
-2019-06-04T21:12:39.488+0800 I CONTROL  [initandlisten] options: {}
-2019-06-04T21:12:39.495+0800 I -        [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
-2019-06-04T21:12:39.495+0800 I STORAGE  [initandlisten] 
-2019-06-04T21:12:39.495+0800 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
-2019-06-04T21:12:39.495+0800 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
-2019-06-04T21:12:39.495+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7449M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
-2019-06-04T21:12:39.932+0800 E STORAGE  [initandlisten] WiredTiger error (1) [1559653959:932022][13900:0x7f49416a70c0], file:WiredTiger.wt, connection: /data/db/WiredTiger.wt: handle-open: open: Operation not permitted
-2019-06-04T21:12:39.933+0800 E -        [initandlisten] Assertion: 28595:1: Operation not permitted src/mongo/db/storage/wiredtiger/wiredtiger_kv_engine.cpp 413
-2019-06-04T21:12:39.933+0800 I STORAGE  [initandlisten] exception in initAndListen: Location28595: 1: Operation not permitted, terminating
-2019-06-04T21:12:39.933+0800 I NETWORK  [initandlisten] shutdown: going to close listening sockets...
-2019-06-04T21:12:39.933+0800 I NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock
-2019-06-04T21:12:39.933+0800 I CONTROL  [initandlisten] now exiting
+  [initandlisten] MongoDB starting : pid=13900 port=27017 dbpath=/data/db 64-bit host=john-P95-HP
+  [initandlisten] db version v3.6.3
+  [initandlisten] git version: 9586e557d54ef70f9ca4b43c26892cd55257e1a5
+  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+  [initandlisten] allocator: tcmalloc
+  [initandlisten] modules: none
+  [initandlisten] build environment:
+  [initandlisten]     distarch: x86_64
+  [initandlisten]     target_arch: x86_64
+  [initandlisten] options: {}
+ [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+ [initandlisten] 
+ [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+  [initandlisten] wiredtiger_open config: create,cache_size=7449M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+ [initandlisten] WiredTiger error (1) [1559653959:932022][13900:0x7f49416a70c0], file:WiredTiger.wt, connection: /data/db/WiredTiger.wt: handle-open: open: Operation not permitted
+ [initandlisten] Assertion: 28595:1: Operation not permitted src/mongo/db/storage/wiredtiger/wiredtiger_kv_engine.cpp 413
+ [initandlisten] exception in initAndListen: Location28595: 1: Operation not permitted, terminating
+ [initandlisten] shutdown: going to close listening sockets...
+ [initandlisten] removing socket file: /tmp/mongodb-27017.sock
+ [initandlisten] now exiting
 ```
 处理：
 

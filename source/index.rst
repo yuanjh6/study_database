@@ -3,8 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to 数据库学习's documentation!
+数据库学习
 ======================================
+数据库相关学习笔记，琐碎知识点和坑
 
 .. toctree::
    :maxdepth: 2
